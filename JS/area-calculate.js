@@ -42,3 +42,11 @@ function parallelCalculate(){
     const area = base * height;
     setElementTextValue('para-area-show', area)
 }
+
+// Ellipse calculate
+function ellipseCalculate(){
+    const majorRadius = getInputValue('ellipse-major')
+    const minorRadius = getInputValue('ellipse-minor')
+    const area = 3.14 * majorRadius * minorRadius;
+    setElementTextValue('ellipse-area-show', area)
+}

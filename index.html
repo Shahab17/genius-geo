@@ -82,6 +82,27 @@
                       </div>
                     </div>
                   </div>
+                <!-- Ellipse card -->
+                <div class="card   bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/ellipse.png" alt=" " class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Ellipse</h2>
+                      <p>Area (A) = π ab</p>
+                      <p>
+                        <input id="ellipse-major" type="text" class="w-20 px-2 outline-none bg-slate-200 rounded-md" placeholder="major">
+                        <span class="ml-2">cm</span>
+
+                        <input id="ellipse-minor" type="text" class="w-20 px-2 ml-3 outline-none bg-slate-200 rounded-md" placeholder="minor">
+                        <span class="ml-2">cm</span>
+                      </p>
+                      <p class="text-xl">Area: <span id="ellipse-area-show" class="font-semibold">0 </span> cm<sup>2</sup> </p>
+                      <div class="card-actions ">
+                        <button onclick="ellipseCalculate()" class="btn btn-primary">Calculator</button>
+                      </div>
+                    </div>
+                  </div>
             </div>
             <!-- calculation container -->
             <div class="w-[400px]">

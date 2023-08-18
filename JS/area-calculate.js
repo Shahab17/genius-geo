@@ -33,3 +33,12 @@ function rectangleCalculate(){
     areaShow.innerText = area;
      
 }
+
+
+// parallelogram calculate
+function parallelCalculate(){
+    const base = getInputValue('parallel-base')
+    const height = getInputValue('parallel-height')
+    const area = base * height;
+    setElementTextValue('para-area-show', area)
+}

@@ -28,10 +28,10 @@
                       <h2 class="card-title">Triangle</h2>
                       <p>Area (A) = 0.5 X b X h</p>
                       <p>
-                        <input id="triangle-base" type="text" class="w-20 px-2 outline-none bg-slate-200 rounded-md" placeholder="base">
+                        <input id="triangle-base" type="number" class="w-20 px-2 outline-none bg-slate-200 rounded-md" placeholder="base">
                         <span class="ml-2">cm</span>
 
-                        <input id="triangle-height" type="text" class="w-20 px-2 ml-3 outline-none bg-slate-200 rounded-md" placeholder="height">
+                        <input id="triangle-height" type="number" class="w-20 px-2 ml-3 outline-none bg-slate-200 rounded-md" placeholder="height">
                         <span class="ml-2">cm</span>
                       </p>
                       <p class="text-xl">Area: <span id="area-show" class="font-semibold">0 </span> cm<sup>2</sup> </p>
@@ -106,7 +106,8 @@
             </div>
             <!-- calculation container -->
             <div class="w-[400px]">
-                <div class="text-3xl text-center">Area Calculator</div>
+                <div class="text-3xl  ">Area Calculator</div>
+                <div id="calculation-entry"></div>
             </div>
         </div>
     </main>

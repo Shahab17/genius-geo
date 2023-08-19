@@ -12,7 +12,10 @@ function triangleCalculate(){
     const area = 0.5 * baseValue * heightValue;
      
     const areaShow = document.getElementById('area-show');
-    areaShow.innerText = area;   
+    areaShow.innerText = area;  
+    
+     // add to calculation entry
+     addToCalculationEntry('Triangle', area)
 }
 
 function rectangleCalculate(){
@@ -26,11 +29,20 @@ function rectangleCalculate(){
     const lengthValue = parseFloat(lengthValueText);
     console.log(widthValue, lengthValue)
 
+    // validate input: width and length
+    if(isNaN(widthValue) || isNaN(lengthValue)){
+        alert('Please Insert a Number')
+        return;
+    }
+
     // show area
     const area = widthValue * lengthValue;
 
     const areaShow = document.getElementById('rec-area-show');
     areaShow.innerText = area;
+
+     // add to calculation entry
+     addToCalculationEntry('Rectangle', area)
      
 }
 
@@ -39,8 +51,17 @@ function rectangleCalculate(){
 function parallelCalculate(){
     const base = getInputValue('parallel-base')
     const height = getInputValue('parallel-height')
+    // validate
+    if(isNaN(base) || isNaN(height)){
+        alert('Please Insert a Number');
+        return;
+    }
     const area = base * height;
     setElementTextValue('para-area-show', area)
+
+    // add to calculation entry
+    addToCalculationEntry('Parallelogram', area)
+
 }
 
 // Ellipse calculate
@@ -48,5 +69,18 @@ function ellipseCalculate(){
     const majorRadius = getInputValue('ellipse-major')
     const minorRadius = getInputValue('ellipse-minor')
     const area = 3.14 * majorRadius * minorRadius;
-    setElementTextValue('ellipse-area-show', area)
+    setElementTextValue('ellipse-area-show', area.toFixed(2))
+
+     // add to calculation entry
+     addToCalculationEntry('Ellipse', area)
+     
 }
+
+
+
+// Data Validation
+/**
+ * 1. set the proper type of the input field. (number ,data ,email)
+ * 2. check type using typeof.
+ * 3. NaN means: Not a Number. isNaN is checking whether the input is not a number or not
+ **/ 
